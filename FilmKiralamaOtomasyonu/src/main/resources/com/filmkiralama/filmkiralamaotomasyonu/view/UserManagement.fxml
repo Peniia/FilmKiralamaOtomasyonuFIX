@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Kullanıcı Yönetimi arayüzü için düzen oluşturur -->
+<AnchorPane prefHeight="329.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.UserManagementController">
+    <children>
+        <!-- Kullanıcı bilgilerini göstermek için tablo -->
+        <TableView fx:id="userTable" layoutX="20" layoutY="20" prefHeight="300" prefWidth="400">
+            <columns>
+                <!-- ID sütunu: Kullanıcının benzersiz kimlik numarasını gösterir -->
+                <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+
+                <!-- Kullanıcı Adı sütunu: Kullanıcının adını gösterir -->
+                <TableColumn fx:id="usernameColumn" prefWidth="100" text="Kullanıcı Adı" />
+
+                <!-- E-posta sütunu: Kullanıcının e-posta adresini gösterir -->
+                <TableColumn fx:id="emailColumn" prefWidth="150" text="E-Mail" />
+
+                <!-- Rol sütunu: Kullanıcının rolünü (ör. Admin veya Müşteri) gösterir -->
+                <TableColumn fx:id="roleColumn" prefWidth="100" text="Rol" />
+            </columns>
+        </TableView>
+
+        <!-- Kullanıcı ekleme butonu: Yeni bir kullanıcı eklemek için kullanılır -->
+        <Button layoutX="450" layoutY="50" onAction="#handleAddUser" text="Kullanıcı Ekle" />
+
+        <!-- Kullanıcı silme butonu: Seçili bir kullanıcıyı silmek için kullanılır -->
+        <Button layoutX="450" layoutY="100" onAction="#handleDeleteUser" text="Kullanıcı Sil" />
+    </children>
+</AnchorPane>

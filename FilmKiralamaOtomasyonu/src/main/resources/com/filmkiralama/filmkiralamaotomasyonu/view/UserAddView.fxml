@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Kullanıcı Ekleme arayüzü için düzen oluşturur -->
+<AnchorPane prefHeight="315.0" prefWidth="438.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.UserAddController">
+    <children>
+
+        <!-- Kullanıcı Ekleme ekranı başlığı -->
+        <Label layoutX="20" layoutY="20" style="-fx-font-size: 18px;" text="Kullanıcı Ekleme" />
+
+        <!-- Kullanıcı Adı etiketi ve giriş alanı -->
+        <Label layoutX="20" layoutY="70" text="Kullanıcı Adı:" />
+        <TextField fx:id="usernameField" layoutX="150" layoutY="70" prefWidth="200" />
+
+        <!-- E-posta etiketi ve giriş alanı -->
+        <Label layoutX="20" layoutY="120" text="E-posta:" />
+        <TextField fx:id="emailField" layoutX="150" layoutY="120" prefWidth="200" />
+
+        <!-- Rol etiketi ve seçim kutusu -->
+        <Label layoutX="20" layoutY="170" text="Şifre:" />
+        <PasswordField fx:id="passwordField" layoutX="150" layoutY="170" prefWidth="200" />
+
+        <Label layoutX="20" layoutY="220" text="Rol:" />
+        <ChoiceBox fx:id="roleChoiceBox" layoutX="150" layoutY="220" prefWidth="200" />
+
+        <!-- Ekle butonu: Yeni bir kullanıcı eklemek için kullanılır -->
+        <Button layoutX="150" layoutY="270" onAction="#handleAddUser" prefHeight="25.0" prefWidth="68.0" text="Ekle" />
+
+        <!-- İptal butonu: Kullanıcı ekleme işlemini iptal etmek için kullanılır -->
+        <Button layoutX="260" layoutY="270" onAction="#handleCancel" prefHeight="25.0" prefWidth="68.0" text="İptal" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Film listesi arayüzü için düzen oluşturur -->
+<AnchorPane prefHeight="386.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.FilmListesiController">
+    <children>
+        <!-- Film listesi ekranı başlığı -->
+        <Label layoutX="20" layoutY="20" style="-fx-font-size: 18px;" text="Film Listesi" />
+
+        <!-- Film bilgilerini göstermek için tablo -->
+        <TableView fx:id="filmTable" layoutX="14.0" layoutY="58.0" prefHeight="280.0" prefWidth="498.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="39.0" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="143.33334732055664" text="Film Adı" />
+                <TableColumn fx:id="genreColumn" prefWidth="107.99998474121094" text="Tür" />
+                <TableColumn fx:id="kiradaMiColumn" prefWidth="86.0" text="Kirada mı?" />
+                <TableColumn fx:id="izlenmeSayisiColumn" prefWidth="117.99996948242188" text="İzlenme Sayısı" />
+            </columns>
+
+         <columnResizePolicy>
+             <!-- Tablo sütunlarının otomatik yeniden boyutlandırılması -->
+             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+        </TableView>
+
+        <!-- Filmi kirala butonu: Seçili filmi kiralama işlemini başlatır -->
+        <Button layoutX="344.0" layoutY="354.0" onAction="#handleFilmKirala" text="Filmi Kirala" />
+        <!-- Filmi izle butonu: Seçili filmi izleme işlemini başlatır -->
+        <Button layoutX="442.0" layoutY="354.0" onAction="#handleIzleFilm" text="Filmi İzle" />
+    </children>
+</AnchorPane>

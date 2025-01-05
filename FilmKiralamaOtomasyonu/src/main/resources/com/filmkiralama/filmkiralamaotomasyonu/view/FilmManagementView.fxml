@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Film yönetimi arayüzü için düzen oluşturur -->
+
+<AnchorPane prefHeight="380.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.FilmManagementController">
+    <children>
+        <!-- Film yönetimi ekranı başlığı -->
+        <Label layoutX="20" layoutY="20" style="-fx-font-size: 18px;" text="Film Yönetimi" />
+
+        <!-- Film bilgilerini göstermek için tablo -->
+        <TableView fx:id="filmTable" layoutX="20" layoutY="69.0" prefHeight="272.0" prefWidth="465.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="130.99999237060547" text="Film Adı" />
+                <TableColumn fx:id="genreColumn" prefWidth="78.00001525878906" text="Tür" />
+                <TableColumn fx:id="rentedColumn" prefWidth="88.0" text="Kirada Mı?" />
+                <TableColumn fx:id="viewCountColumn" prefWidth="113.66668701171875" text="İzlenme Sayısı" />
+            </columns>
+        </TableView>
+        <!-- Film ekleme butonu: Yeni bir film eklemek için kullanılır -->
+        <Button layoutX="490.0" layoutY="153.0" onAction="#handleAddFilm" text="Film Ekle" />
+        <!-- Film silme butonu: Seçili bir filmi silmek için kullanılır -->
+        <Button layoutX="494.0" layoutY="192.0" onAction="#handleDeleteFilm" text="Film Sil" />
+    </children>
+</AnchorPane>

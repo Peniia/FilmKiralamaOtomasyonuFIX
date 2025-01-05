@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane ile kullanıcı arayüzü düzenlenir -->
+<AnchorPane prefHeight="243.0" prefWidth="354.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.AdminDashboardController">
+    <children>
+        <!-- Admin paneli başlığı -->
+        <Label layoutX="124.0" layoutY="24.0" style="-fx-font-size: 18px;" text="Admin Paneli" />
+        <!-- Kullanıcı yönetimi butonu: Kullanıcı yönetim ekranına yönlendirir -->
+        <Button layoutX="124.0" layoutY="76.0" onAction="#handleKullaniciYonetimi" text="Kullanıcıları Yönet" />
+        <!-- Film yönetimi butonu: Film yönetim ekranına yönlendirir -->
+        <Button layoutX="132.0" layoutY="133.0" onAction="#handleFilmYonetimi" text="Filmleri Yönet" />
+        <!-- Çıkış butonu: Uygulamadan çıkış yapmak için kullanılır -->
+        <Button fx:id="cikisButton" layoutX="276.0" layoutY="203.0" onAction="#handleCikis" text="Çıkış Yap" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Kiralanan Filmler arayüzü için düzen oluşturur -->
+<AnchorPane prefHeight="431.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.KiralananFilmlerController">
+    <children>
+        <!-- Kiralanan Filmler ekranı başlığı -->
+        <Label layoutX="20" layoutY="20" style="-fx-font-size: 18px;" text="Kiralanan Filmler" />
+
+        <!-- Kiralanan filmleri göstermek için tablo -->
+        <TableView fx:id="kiralananFilmlerTable" layoutX="20" layoutY="60" prefHeight="300" prefWidth="448.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="57.00000190734863" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="211.66666412353516" text="Film Adı" />
+                <TableColumn fx:id="genreColumn" prefWidth="179.33331298828125" text="Tür" />
+            </columns>
+        </TableView>
+        <!-- Kiralamayı Sonlandır butonu: Seçili filmin kiralamasını sonlandırır -->
+        <Button fx:id="kiralamayiSonlandirButton" layoutX="20" layoutY="380" onAction="#handleKiralamayiSonlandir" text="Kiralamayı Sonlandır" />
+    </children>
+</AnchorPane>

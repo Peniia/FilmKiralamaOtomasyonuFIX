@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Film ekleme arayüzü için düzen oluşturur -->
+
+<AnchorPane prefHeight="235.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.FilmEkleController">
+    <children>
+        <!-- Film ekleme ekranı başlığı -->
+        <Label layoutX="20" layoutY="20" style="-fx-font-size: 18px;" text="Film Ekle" />
+
+        <!-- Film adı giriş etiketi ve alanı -->
+
+        <Label layoutX="20" layoutY="70" text="Film Adı:" />
+        <TextField fx:id="filmAdiField" layoutX="100" layoutY="70" prefWidth="200" />
+
+        <!-- Tür giriş etiketi ve alanı -->
+        <Label layoutX="20" layoutY="120" text="Tür:" />
+        <TextField fx:id="turField" layoutX="100" layoutY="120" prefWidth="200" />
+
+        <!-- Kaydet butonu: Yeni bir filmi kaydetmek için kullanılır -->
+        <Button layoutX="100" layoutY="170" onAction="#handleSaveFilm" text="Kaydet" />
+        <!-- İptal butonu: Film ekleme işlemini iptal etmek için kullanılır -->
+        <Button layoutX="200" layoutY="170" onAction="#handleCancel" text="İptal" />
+    </children>
+</AnchorPane>

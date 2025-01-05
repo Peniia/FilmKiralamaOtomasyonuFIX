@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Kullanıcı Girişi arayüzü için düzen oluşturur -->
+<AnchorPane prefHeight="233.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.LoginController">
+    <!-- Kullanıcı Girişi ekranı başlığı -->
+    <Label layoutX="126.0" layoutY="21.0" style="-fx-font-size: 18px;" text="Kullanıcı Girişi" />
+
+    <!-- Kullanıcı Adı etiketi ve giriş alanı -->
+    <Label layoutX="23.0" layoutY="74.0" text="Kullanıcı Adı :" />
+    <TextField fx:id="kullaniciAdiField" layoutX="126.0" layoutY="70.0" />
+
+    <!-- Şifre etiketi ve giriş alanı -->
+    <Label layoutX="65.0" layoutY="128.0" text="Şifre :" />
+    <PasswordField fx:id="passwordField" layoutX="126.0" layoutY="124.0" />
+
+    <!-- Butonlar için HBox düzenleyici -->
+    <HBox layoutX="126.0" layoutY="170.0" spacing="10">
+        <!-- Giriş Yap butonu: Kullanıcı giriş işlemini başlatır -->
+        <Button onAction="#handleLogin" text="Giriş Yap" />
+        <!-- Kayıt Ol butonu: Kullanıcı kayıt ekranına yönlendirir -->
+        <Button onAction="#handleRegister" text="Kayıt Ol" />
+    </HBox>
+
+</AnchorPane>

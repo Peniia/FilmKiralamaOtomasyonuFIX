@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-243.22562.218">
+    <data-source name="jdbc:mysql://localhost:3306/film_kiralama" uuid="98a3723a-0743-4a9f-9347-c4f3577f27cd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>vemir</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

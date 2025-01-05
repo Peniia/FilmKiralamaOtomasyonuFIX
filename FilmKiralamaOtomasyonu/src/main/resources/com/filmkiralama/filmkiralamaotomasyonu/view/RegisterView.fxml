@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Ana konteyner: AnchorPane, Kullanıcı Kaydı arayüzü için düzen oluşturur -->
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmkiralama.filmkiralamaotomasyonu.Controller.RegisterController">
+    <!-- Kullanıcı Kaydı ekranı başlığı -->
+    <Label layoutX="145.0" layoutY="20.0" style="-fx-font-size: 18px;" text="Kullanıcı Kaydı" />
+    <!-- Kullanıcı Adı etiketi ve giriş alanı -->
+    <Label layoutX="50.0" layoutY="80.0" text="Kullanıcı Adı:" />
+    <TextField fx:id="kullaniciAdiField" layoutX="150.0" layoutY="75.0" prefWidth="200.0" />
+
+    <!-- Şifre etiketi ve giriş alanı -->
+    <Label layoutX="50.0" layoutY="130.0" text="Şifre:" />
+    <PasswordField fx:id="sifreField" layoutX="150.0" layoutY="125.0" prefWidth="200.0" />
+
+    <!-- E-posta etiketi ve giriş alanı -->
+    <Label layoutX="50.0" layoutY="180.0" text="E-Posta:" />
+    <TextField fx:id="emailField" layoutX="150.0" layoutY="175.0" prefWidth="200.0" />
+
+    <!-- Kaydol butonu: Kullanıcı kayıt işlemini başlatır -->
+    <Button layoutX="150.0" layoutY="230.0" onAction="#handleRegister" text="Kaydol" prefWidth="100.0" />
+</AnchorPane>
